@@ -1,0 +1,146 @@
+{
+  "suites": [
+    {
+      "title": "e2e",
+      "file": "tests",
+      "suites": [
+        {
+          "title": "Shop",
+          "specs": [
+            {
+              "title": "pays with saved card",
+              "file": "tests/checkout.spec.ts",
+              "tests": [
+                {
+                  "projectName": "chromium",
+                  "status": "unexpected",
+                  "results": [
+                    {
+                      "status": "failed",
+                      "duration": 30000,
+                      "retry": 0,
+                      "error": {
+                        "message": "\u001b[31mTimeout 30000ms exceeded.\u001b[39m\nWaiting for locator('#pay-btn-1')\n  strict mode violation",
+                        "stack": "Error: \u001b[31mTimeout 30000ms exceeded.\u001b[39m\n    at tests/checkout.spec.ts:42:11"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "pays with new card",
+              "file": "tests/checkout.spec.ts",
+              "tests": [
+                {
+                  "projectName": "chromium",
+                  "status": "unexpected",
+                  "results": [
+                    {
+                      "status": "failed",
+                      "duration": 30000,
+                      "retry": 0,
+                      "error": {
+                        "message": "\u001b[31mTimeout 30000ms exceeded.\u001b[39m\nWaiting for locator('#pay-btn-2')\n  strict mode violation",
+                        "stack": "Error: \u001b[31mTimeout 30000ms exceeded.\u001b[39m\n    at tests/checkout.spec.ts:42:11"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "applies coupon",
+              "file": "tests/checkout.spec.ts",
+              "tests": [
+                {
+                  "projectName": "chromium",
+                  "status": "unexpected",
+                  "results": [
+                    {
+                      "status": "failed",
+                      "duration": 30000,
+                      "retry": 0,
+                      "error": {
+                        "message": "\u001b[31mTimeout 30000ms exceeded.\u001b[39m\nWaiting for locator('#pay-btn-3')\n  strict mode violation",
+                        "stack": "Error: \u001b[31mTimeout 30000ms exceeded.\u001b[39m\n    at tests/checkout.spec.ts:42:11"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "cart total is correct",
+              "file": "tests/cart.spec.ts",
+              "tests": [
+                {
+                  "projectName": "chromium",
+                  "status": "unexpected",
+                  "results": [
+                    {
+                      "status": "failed",
+                      "duration": 30000,
+                      "retry": 0,
+                      "error": {
+                        "message": "Error: expect(received).toBe(expected)\nExpected: 109.98\nReceived: 99.98",
+                        "stack": "Error: Error: expect(received).toBe(expected)\n    at tests/cart.spec.ts:42:11"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "loads order history",
+              "file": "tests/orders.spec.ts",
+              "tests": [
+                {
+                  "projectName": "chromium",
+                  "status": "unexpected",
+                  "results": [
+                    {
+                      "status": "failed",
+                      "duration": 30000,
+                      "retry": 0,
+                      "error": {
+                        "message": "apiRequestContext.get: connect ECONNREFUSED 10.0.3.14:8080",
+                        "stack": "Error: apiRequestContext.get: connect ECONNREFUSED 10.0.3.14:8080\n    at tests/orders.spec.ts:42:11"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "search suggestions appear",
+              "file": "tests/search.spec.ts",
+              "tests": [
+                {
+                  "projectName": "chromium",
+                  "status": "flaky",
+                  "results": [
+                    {
+                      "status": "failed",
+                      "duration": 5000,
+                      "retry": 0,
+                      "error": {
+                        "message": "Timeout 5000ms exceeded.",
+                        "stack": "at checkout.spec.ts:21"
+                      }
+                    },
+                    {
+                      "status": "passed",
+                      "duration": 2100,
+                      "retry": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

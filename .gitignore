@@ -1,0 +1,5 @@
+node_modules/
+dist
+.env
+triage-report.md
+README.local.md

@@ -1,0 +1,22 @@
+name: E2E + AI Failure Triage
+on: [push, pull_request]
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci
+      - name: Run Playwright tests (JSON reporter)
+        run: npx playwright test --reporter=json > playwright-report.json
+        continue-on-error: true
+      - name: Triage failures with AI
+        run: npx tsx src/cli.ts --report playwright-report.json --provider gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: triage-report
+          path: triage-report.md

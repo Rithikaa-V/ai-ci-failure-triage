@@ -1,0 +1,25 @@
+{
+  "name": "failuresense",
+  "version": "1.0.0",
+  "description": "AI-powered CI test failure triage for Playwright reports (Gemini / Groq free tier)",
+  "type": "module",
+  "scripts": {
+    "triage": "tsx src/cli.ts",
+    "demo": "tsx src/cli.ts --report fixtures/playwright-report.json --provider none",
+    "test": "vitest run",
+    "build": "tsc"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
